@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "user@example.com",
+      "password": "password123",
+      "name": "Друг"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "7241",
+      "title": "задача",
+      "description": "задача",
+      "dueDate": "2025-05-31",
+      "isShared": false,
+      "completed": true,
+      "userId": "1",
+      "createdAt": "2025-05-15T20:29:14.422Z"
+    },
+    {
+      "id": "4268",
+      "title": "задача 2",
+      "description": "задача 2",
+      "dueDate": "2025-06-06",
+      "isShared": true,
+      "completed": true,
+      "userId": "1",
+      "createdAt": "2025-05-15T20:29:26.109Z"
+    },
+    {
+      "id": "f7d8",
+      "title": "task3",
+      "description": "task3",
+      "dueDate": "2025-05-28",
+      "isShared": true,
+      "completed": false,
+      "userId": "1",
+      "createdAt": "2025-05-15T20:29:46.879Z"
+    },
+    {
+      "id": "bcda",
+      "title": "task4",
+      "description": "task4",
+      "dueDate": "2025-05-24",
+      "isShared": true,
+      "completed": false,
+      "userId": "1",
+      "createdAt": "2025-05-15T20:30:18.375Z"
+    },
+    {
+      "id": "55fb",
+      "title": "task6",
+      "description": "",
+      "dueDate": "2025-06-04",
+      "isShared": false,
+      "completed": false,
+      "userId": "1",
+      "createdAt": "2025-05-15T21:29:34.195Z"
+    }
+  ]
+}
