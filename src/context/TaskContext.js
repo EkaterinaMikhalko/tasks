@@ -8,11 +8,10 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { user } = useAuth(); // Добавляем useAuth
+  const { user } = useAuth(); 
 
-  // Используем useCallback для стабильной ссылки на функцию
   const fetchTasks = useCallback(async () => {
-    if (!user) return; // Не пытаемся загрузить задачи без пользователя
+    if (!user) return; 
     
     setLoading(true);
     setError(null);
@@ -24,11 +23,11 @@ export const TaskProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  }, [user?.id]); // Зависимость только от user.id
+  }, [user?.id]); 
 
   useEffect(() => {
     fetchTasks();
-  }, [fetchTasks]); // Теперь эффект зависит только от fetchTasks
+  }, [fetchTasks]); 
 
   const addTask = async (taskData) => {
     setLoading(true);
@@ -47,19 +46,17 @@ export const TaskProvider = ({ children }) => {
  const removeTask = async (taskId) => {
   setLoading(true);
   try {
-    // Оптимистичное обновление UI
     setTasks(prev => prev.filter(task => task.id !== taskId));
     
-    // Отправляем запрос на удаление
     await axios.delete(`http://localhost:3001/tasks/${taskId}`);
   } catch (error) {
-    // Восстанавливаем задачи при ошибке
+
     setTasks(prev => [...prev, tasks.find(t => t.id === taskId)]);
     
-    // Специальная обработка ошибки 404
+ 
     if (error.response?.status === 404) {
       console.warn('Task already deleted on server');
-      return; // Не бросаем ошибку для уже удаленных задач
+      return; 
     }
     
     setError(error.message);
@@ -92,7 +89,7 @@ const updateTask = async (id, taskData) => {
     fetchTasks,
     addTask,
     removeTask,
-    updateTask, // Добавляем функцию в контекст
+    updateTask, 
   };
 
 

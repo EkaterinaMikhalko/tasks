@@ -38,11 +38,6 @@
 .task-due-date {
   color: #d35400;
 }
-/* 
-.task-shared-label {
-  color: #16a085;
-  font-weight: 500;
-} */
 
 .task-actions {
   display: flex;

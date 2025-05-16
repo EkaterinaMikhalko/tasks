@@ -12,7 +12,6 @@
   white-space: nowrap;
 }
 
-/* Variants */
 .btn-primary {
   background-color: #4a6fa5;
   color: white;
@@ -60,7 +59,6 @@
   background-color: #c82333;
 }
 
-/* Sizes */
 .btn-small {
   padding: 6px 12px;
   font-size: 12px;
@@ -76,18 +74,16 @@
   font-size: 16px;
 }
 
-/* States */
+
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* Full width */
 .btn-full-width {
   width: 100%;
 }
 
-/* Focus state */
 .btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.3);

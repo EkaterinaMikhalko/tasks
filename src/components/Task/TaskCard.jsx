@@ -8,7 +8,6 @@ const TaskCard = ({ task }) => {
   const { removeTask } = useTasks();
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  //  const { updateTask } = useTasks();
 
   const handleDelete = async () => {
     if (!window.confirm("Вы уверены, что хотите удалить задачу?")) {
@@ -26,16 +25,6 @@ const TaskCard = ({ task }) => {
       setIsDeleting(false);
     }
   };
-
-  // const handleToggleComplete = async () => {
-  //   try {
-  //     await updateTask(task.id, {
-  //       completed: !task.completed
-  //     });
-  //   } catch (error) {
-  //     console.error('Ошибка при обновлении задачи:', error);
-  //   }
-  // };
 
   return (
     <>
@@ -58,9 +47,6 @@ const TaskCard = ({ task }) => {
                 Due: {new Date(task.dueDate).toLocaleDateString()}
               </span>
             )}
-            {/* {task.isShared && (
-              <span className="task-shared-label">Общие задачи</span>
-            )} */}
           </div>
         </div>
 

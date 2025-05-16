@@ -15,7 +15,6 @@ export const getTasks = async (filter = 'all') => {
     const userId = parseInt(token.split('-')[2]);
     let url = `${API_URL}/tasks`;
     
-    // Apply filters
     if (filter === 'my') {
       url += `?userId=${userId}`;
     } else if (filter === 'shared') {
@@ -39,7 +38,7 @@ export const createTask = async (taskData) => {
       ...taskData,
       userId,
       createdAt: new Date().toISOString(),
-      id: Date.now() // Mock ID generation
+      id: Date.now() 
     };
     
     const response = await axios.post(`${API_URL}/tasks`, newTask, getAuthHeader());
